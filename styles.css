@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fffffe;
+    color: darkslategray;
+    background-color: #fffffe;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23e5bd98' fill-opacity='0.18'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    font-family: 'Spartan', sans-serif;
+    font-size: 20px;
+}
+
+a {
+    color: lightslategray;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* NAVIGATION */
+.animate__fadeInLeft {
+    width: 100px;
+    animation: fadeInLeft;
+    animation-duration: 2s;
+}
+
+.nav-main {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 10px 0;
+    height: 100px;
+}
+
+/* NAV LEFT */
+.nav-main ul {
+    display: flex;
+}
+
+.nav-main ul li {
+    padding: 10px;
+}
+
+.nav-main ul li a {
+    padding: 5px;
+}
+
+.nav-main ul li a:hover {
+    border-bottom: 2px solid orange;
+}
+
+.nav-main ul.nav-menu {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.menu-btn {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+    z-index: 2;
+    display: none;
+    color: lightslategray;
+}
+
+/* SHOWCASE */
+hr {
+    margin: 2px 0;
+}
+
+.showcase {
+    width: 100%;
+    height: 450px;
+    background: url(file:///home/theturc/Downloads/Cursos/Html/AtumNavone/ANEC/banner1.jpg) no-repeat center center/cover;
+    padding: 50px;
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    color: darkslategrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px 0 20px 0;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+}
+
+.showcase h1 {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* SERVICIOS */
+
+.titulo {
+    font-size: 25px;
+}
+
+.titulo h3 {
+    font-family: 'Spartan', sans-serif;
+    color: lightslategray;
+    text-align: center;
+    font-weight: bolder;
+
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 10px 0;
+}
+
+.cards img {
+    width: 100%;
+    height: 250px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.50);
+}
+
+.cards h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: lightslategray;
+}
+
+.cards a {
+    padding: 10px 0;
+    color: lightslategray;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.cards p {
+    font-size: 15px;
+}
+
+.cards a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: darkgray;
+    color: rgb(66, 66, 66);
+    font-size: 10px;
+    padding: 18px 0;
+    text-align: center;
+    padding-bottom: 18px;
+    font-family: monospace;
+}
+
+.titulo {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* MediaQ */
+@media (max-width: 700px) {
+    .nav-main ul.nav-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #5a5954;
+        height: 100%;
+        padding: 20px;
+        opacity: .9;
+        transform: translateX(-400px);
+        transition: transform .5s ease-in-out; /*efecto*/
+    }
+
+    .nav-main ul.nav-menu.show {
+        transform: translateX(-20px);
+    }
+
+    .nav-main ul.nav-menu li{
+        padding: 20px;
+        font-size: 25px;     
+    }
+
+    .nav-main ul.nav-menu-right {
+        margin-right: 40px;
+    }
+
+    .menu-btn {
+        display: block;
+        font-size: 1.8rem;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .showcase h1 {
+        width: 80%;
+        font-size: 25px;
+    }
+
+    
+}
+
+@media (max-width: 500px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .cards img {
+        height: 250px;
+    }
+
+    .cards {
+        width: 100%;
+        padding: 10px 20px;
+    }
+}
+
+
+
